@@ -1,0 +1,14 @@
+<div style="display: block;">
+  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="barChartColors"
+    height="260">
+  </canvas>
+</div>
+
+<div class="subtitle">年目標</div>
+<div class="subvalue1">
+  {{ yearTarget | toNumber}}</div><br>
+<div class="subtitle">累積</div>
+<div class="subvalue2">{{ summary | toNumber}}</div><br>
+<div class="subtitle">達成率</div>
+<div class="subvalue2">{{ achievingRate }}%</div>
