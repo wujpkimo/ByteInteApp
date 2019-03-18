@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets, ChartFontOptions } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
-
+import { Revenuedata } from '../revenuedata';
 
 @Component({
   selector: 'app-revenue',
@@ -9,6 +9,36 @@ import { Label, Color } from 'ng2-charts';
   styleUrls: ['./revenue.component.css']
 })
 export class RevenueComponent implements OnInit {
+
+  public rdata: Revenuedata[] = [{
+    name: '全球',
+    yearTarget: 840000,
+    summary: 223326,
+    achievingRate: 26.59,
+    data: [{
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90000, 66326, 68000],
+      label: '盈收'
+    }]
+  }, {
+    name: '中國',
+    yearTarget: 340000,
+    summary: 123326,
+    achievingRate: 16.59,
+    data: [{
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40000, 26326, 18000], label: '盈收'
+    }]
+  }, {
+    name: '海外',
+    yearTarget: 500000,
+    summary: 100000,
+    achievingRate: 35.59,
+    data: [{
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50000, 40000, 50000],
+      label: '盈收'
+    }]
+  }];
+
+  public display: Revenuedata = this.rdata[0];
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -27,7 +57,8 @@ export class RevenueComponent implements OnInit {
       }],
       yAxes: [{
         ticks: {
-          fontColor: 'white'
+          fontColor: 'white',
+          fontSize: 12,
         },
         gridLines: { color: 'rgba(255,255,255,0.1)' },
       }]
@@ -62,18 +93,18 @@ export class RevenueComponent implements OnInit {
   ];
   public barChartPlugins = [];
 
-  public barChartData: ChartDataSets[] = [
-    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90000, 66326, 68000], label: '盈收' }
-  ];
+  // public barChartData: ChartDataSets[] = [
+  //   { data: this.display.data, label: '盈收' }
+  // ];
 
-  yearTarget = 840000;
-  summary = 223326;
-  achievingRate = 26.59;
-  xboo: boolean = this.yearTarget > 500000;
-
-  constructor() { }
+  constructor(
+  ) {
+  }
 
   ngOnInit() {
   }
 
+  onSelect(region: Revenuedata) {
+    this.display = region;
+  }
 }

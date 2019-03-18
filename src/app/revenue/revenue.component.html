@@ -1,5 +1,9 @@
+<ul class="region">
+  <li *ngFor="let item of rdata" [class.selected]="display===item" (click)="onSelect(item)">{{ item.name }}</li>
+</ul>
+
 <div style="display: block;">
-  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+  <canvas baseChart [datasets]="display.data" [labels]="barChartLabels" [options]="barChartOptions"
     [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="barChartColors"
     height="260">
   </canvas>
@@ -7,8 +11,8 @@
 
 <div class="subtitle">年目標</div>
 <div class="subvalue1">
-  {{ yearTarget | toNumber}}</div><br>
+  {{ display.yearTarget | toNumber}}</div><br>
 <div class="subtitle">累積</div>
-<div class="subvalue2">{{ summary | toNumber}}</div><br>
+<div class="subvalue2">{{ display.summary | toNumber}}</div><br>
 <div class="subtitle">達成率</div>
-<div class="subvalue2">{{ achievingRate }}%</div>
+<div class="subvalue2">{{ display.achievingRate }}%</div>
