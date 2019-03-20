@@ -1,14 +1,27 @@
-<ul class="region">
-  <li *ngFor="let item of nav" [class.selected]="condition===item" (click)="onSelect(item)">{{ item.name }}</li>
-</ul>
+<div>
+  <ul class="region">
+    <li *ngFor="let item of nav" [class.selected]="condition===item" (click)="onSelect(item)">{{ item.name }}</li>
+  </ul>
+</div>
 
-<div style="display:block;">
-  <div class="list" *ngFor="let item of list">{{ item.day }} {{ item.customer }} {{ item.cost | toNumber }}
-    <hr>
-  </div>
+<div>
+  <table>
+    <tr>
+      <td>Day</td>
+      <td>Customer</td>
+      <td>Cost</td>
+    </tr>
+    <tr *ngFor="let item of list">
+      <td>{{ item.day }}</td>
+      <td>{{ item.customer }}</td>
+      <td>{{ item.cost | toNumber }}</td>
+    </tr>
+  </table>
 </div>
 
 
-<div class="subtitle">總計</div>
-<div class="subvalue1">
-  {{ getsummary() | toNumber}}</div><br>
+<div class="footer">
+  <div class="subtitle">總計</div>
+  <div class="subvalue1">
+    {{ getsummary() | toNumber}}</div><br>
+</div>

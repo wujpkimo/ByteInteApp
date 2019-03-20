@@ -1,3 +1,24 @@
+div{
+  display: flow-root;
+}
+
+table{
+  width: 100%;
+  padding-right: 10px;
+
+}
+tr {
+
+  font-size: 25px;
+  text-align: center;
+}
+
+td{
+  color: red;
+  border-bottom:3px #82FFFF solid;
+}
+
+
 .subtitle{
   border-width: 3px;
   border-color: white;
@@ -20,9 +41,6 @@
   width: 100px;
 }
 
-.list{
-position: relative;
-}
 .selected {
   color: skyblue;
  }
@@ -45,4 +63,10 @@ position: relative;
 
  .region li:hover {
    color: brown;
+ }
+
+ .footer{
+   position: fixed;
+   left:0;
+   bottom: 50px;
  }
