@@ -15,26 +15,32 @@ export class RevenueComponent implements OnInit {
     yearTarget: 840000,
     summary: 223326,
     achievingRate: 26.59,
+    wip: 30000,
+    estrevenue: 500000,
     data: [{
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90000, 66326, 68000],
-      label: '盈收'
+      label: '營收'
     }]
   }, {
     name: '中國',
     yearTarget: 340000,
     summary: 123326,
     achievingRate: 16.59,
+    wip: 20000,
+    estrevenue: 400000,
     data: [{
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40000, 26326, 18000], label: '盈收'
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40000, 26326, 18000], label: '營收'
     }]
   }, {
     name: '海外',
     yearTarget: 500000,
     summary: 100000,
     achievingRate: 35.59,
+    wip: 10000,
+    estrevenue: 100000,
     data: [{
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50000, 40000, 50000],
-      label: '盈收'
+      label: '營收'
     }]
   }];
 

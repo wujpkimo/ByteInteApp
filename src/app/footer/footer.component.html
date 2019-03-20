@@ -1,6 +1,4 @@
-<div class="footer">
-  <nav>
-    <a *ngFor="let item of navlist" routerLinkActive="selected" [routerLinkActiveOptions]="{exact:
+<div>
+  <a *ngFor="let item of navlist" routerLinkActive="selected" [routerLinkActiveOptions]="{exact:
       true}" routerLink="{{item.url}}">{{item.name}}</a>
-  </nav>
 </div>

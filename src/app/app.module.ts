@@ -23,6 +23,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { fakeBackendProvider } from './_helpers/fake-backend';
+import { Revenue2Component } from './revenue2/revenue2.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { fakeBackendProvider } from './_helpers/fake-backend';
     ToNumberPipe,
     LoginComponent,
     AlertComponent,
-    RegisterComponent
+    RegisterComponent,
+    Revenue2Component
   ],
   imports: [
     BrowserModule,

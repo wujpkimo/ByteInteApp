@@ -1,0 +1,48 @@
+.subtitle{
+  border-width: 3px;
+  border-color: white;
+  border-radius: 8px;
+  border-style:solid;
+  margin: 5px;
+  padding: 8px;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+.subvalue1{
+  display: inline-block;
+  font-size: 30px;
+  padding-left: 20px;
+  color: red;
+  text-align: right;
+  width: 100px;
+}
+
+.list{
+position: relative;
+}
+.selected {
+  color: skyblue;
+ }
+ .region {
+   margin: 0 0 0 0;
+   list-style-type: none;
+   padding: 0;
+   width: 15em;
+ }
+ .region li {
+   cursor: pointer;
+   left: 0;
+   margin: .5em;
+   height: 1.6em;
+   float:left
+ }
+ .region li.selected:hover {
+   color: skyblue;
+ }
+
+ .region li:hover {
+   color: brown;
+ }

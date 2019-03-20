@@ -1,17 +1,10 @@
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    line-height: 40px;
-    color: white;
-    text-align: center;
-  }
+div{
+  padding: 5px 0 5px 0;
+}
 a{
-  padding: 12px;
+  padding: 0 12px 0 6px;
   font-size: 20px;
   text-decoration: none;
-
 }
 .selected {
   color: skyblue;

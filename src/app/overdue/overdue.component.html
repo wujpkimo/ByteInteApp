@@ -1,3 +1,14 @@
-<p>
-  overdue works!
-</p>
+<ul class="region">
+  <li *ngFor="let item of nav" [class.selected]="condition===item" (click)="onSelect(item)">{{ item.name }}</li>
+</ul>
+
+<div style="display:block;">
+  <div class="list" *ngFor="let item of list">{{ item.day }} {{ item.customer }} {{ item.cost | toNumber }}
+    <hr>
+  </div>
+</div>
+
+
+<div class="subtitle">總計</div>
+<div class="subvalue1">
+  {{ getsummary() | toNumber}}</div><br>
