@@ -14,9 +14,10 @@ export class OverdueComponent implements OnInit {
     { day: 5, customer: '智邦', cost: 240000 }
   ];
 
-  display = this.list;
-
   public condition: Nav = this.nav[0];
+
+  public display: List[] = this.list;
+
   constructor() { }
 
   ngOnInit() {
@@ -24,15 +25,15 @@ export class OverdueComponent implements OnInit {
 
   getsummary(): number {
     let total = 0;
-    for (let i = 0; i <= this.list.length - 1; i++) {
-      total += this.list[i].cost;
+    for (let i = 0; i <= this.display.length - 1; i++) {
+      total += this.display[i].cost;
     }
     return total;
   }
 
   onSelect(nav: Nav) {
-    this.display = this.list.filter(p => p.day > nav.condition);
-    // this.condition = this.nav;
+    this.display = this.list.filter(p => p.day >= nav.condition);
+    this.condition = nav;
   }
 }
 

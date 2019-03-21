@@ -18,8 +18,7 @@ export class RevenueComponent implements OnInit {
     wip: 30000,
     estrevenue: 500000,
     data: [{
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90000, 66326, 68000],
-      label: '營收'
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90000, 66326, 68000], label: '營收'
     }]
   }, {
     name: '中國',
@@ -39,8 +38,7 @@ export class RevenueComponent implements OnInit {
     wip: 10000,
     estrevenue: 100000,
     data: [{
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50000, 40000, 50000],
-      label: '營收'
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50000, 40000, 50000], label: '營收'
     }]
   }];
 
