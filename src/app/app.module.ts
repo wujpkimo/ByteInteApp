@@ -14,16 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { ToNumberPipe } from './_pipe/to-number.pipe';
 
 import { LoginComponent } from './login/login.component';
-import { AlertComponent } from './_components/alert/alert.component';
-import { RegisterComponent } from './register/register.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { ErrorInterceptor } from './_helpers/error.interceptor';
-import { JwtInterceptor } from './_helpers/jwt.interceptor';
-import { fakeBackendProvider } from './_helpers/fake-backend';
 import { Revenue2Component } from './revenue2/revenue2.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
@@ -37,9 +31,8 @@ import { Revenue2Component } from './revenue2/revenue2.component';
     HomeComponent,
     ToNumberPipe,
     LoginComponent,
-    AlertComponent,
-    RegisterComponent,
-    Revenue2Component
+    Revenue2Component,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -48,11 +41,7 @@ import { Revenue2Component } from './revenue2/revenue2.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
